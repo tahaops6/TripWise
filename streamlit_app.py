@@ -66,3 +66,31 @@ if submit_button and user_input.strip():
 
     except Exception as e:
         st.error(f"⚠️ Something went wrong while fetching your itinerary: {e}")
+
+
+# FAQ Section
+with st.expander("❓ Frequently Asked Questions (FAQs)"):
+    st.markdown("""
+    **Q1: Is the travel plan accurate and bookable?**  
+    A: The itinerary is AI-generated and meant as inspiration. Always verify transportation, accommodation, and activity details before booking.
+
+    **Q2: Can I plan trips for multiple destinations?**  
+    A: Yes! Just include all destinations in your prompt (e.g., “Plan a 10-day trip from Rome to Paris with stops in Switzerland”).
+
+    **Q3: Does TripWise consider budget preferences?**  
+    A: Not yet, but we're working on budget filters soon! For now, feel free to include budget info in your prompt (e.g., “a low-cost trip to Thailand”).
+
+    **Q4: Can I customize trip themes (adventure, culture, food)?**  
+    A: Absolutely! Tailor your prompt with preferences like “adventure activities”, “historic landmarks”, or “local food experiences”.
+
+    **Q5: Is my personal data stored or shared?**  
+    A: No. TripWise does not collect or store personal data. All queries are processed securely and anonymously.
+
+    **Q6: What powers TripWise's travel recommendations?**  
+    A: TripWise uses an agentic AI framework combining OpenAI's LLMs, prompt engineering, and modular tools for smart itinerary generation.
+
+    **Q7: Can I use TripWise on mobile?**  
+    A: Yes! The app is responsive and works smoothly on mobile browsers — perfect for travel planning on the go. 📱
+    """)
+
+
