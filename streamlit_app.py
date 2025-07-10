@@ -3,7 +3,7 @@ import requests
 import datetime
 
 # Backend API endpoint
-BASE_URL = "http://localhost:8000"
+BASE_URL = "https://tripwise-fumv.onrender.com"
 
 # App Configuration
 st.set_page_config(
