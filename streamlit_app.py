@@ -114,16 +114,11 @@ if submit_button and user_input.strip():
 if st.session_state.last_plan:
     itinerary = st.session_state.last_plan
 
-    # 🗺️ Static Map (e.g. Dubai)
-    st.subheader("📌 Map Preview")
-    st.map(pd.DataFrame({'lat': [25.276987], 'lon': [55.296249]}))
 
     # 📄 Download Itinerary
     st.download_button("📄 Download as TXT", itinerary, file_name="tripwise_plan.txt")
 
-    # 🧭 Mocked Nearby Attractions
-    st.subheader("🎯 Nearby Attractions")
-    st.markdown("- 🕌 Burj Khalifa\n- 🛍️ Dubai Mall\n- 🏖️ Jumeirah Beach\n- 🏜️ Desert Safari Camps")
+   
 
     # 🔁 Regenerate Option
     if st.button("🔁 Regenerate Plan"):
@@ -136,20 +131,23 @@ if st.session_state.last_plan:
 with st.expander("❓ Frequently Asked Questions (FAQs)"):
     st.markdown("""
     **Q1: Is the travel plan accurate and bookable?**  
-    AI-generated suggestions are for inspiration. Verify details before booking.
+    A: The itinerary is AI-generated and meant as inspiration. Always verify transportation, accommodation, and activity details before booking.
 
     **Q2: Can I plan trips for multiple destinations?**  
-    Yes! Just include them in your prompt.
+    A: Yes! Just include all destinations in your prompt (e.g., “Plan a 10-day trip from Rome to Paris with stops in Switzerland”).
 
-    **Q3: How does the budget filter work?**  
-    It affects how the AI frames the itinerary (more luxury, budget-conscious, etc.)
+    **Q3: Does TripWise consider budget preferences?**  
+    A: Not yet, but we're working on budget filters soon! For now, feel free to include budget info in your prompt (e.g., “a low-cost trip to Thailand”).
 
-    **Q4: Is my data stored?**  
-    No, TripWise does not collect or store user data.
+    **Q4: Can I customize trip themes (adventure, culture, food)?**  
+    A: Absolutely! Tailor your prompt with preferences like “adventure activities”, “historic landmarks”, or “local food experiences”.
 
-    **Q5: What powers this app?**  
-    TripWise uses OpenAI's GPT + custom AI prompt agents to generate smart plans.
+    **Q5: Is my personal data stored or shared?**  
+    A: No. TripWise does not collect or store personal data. All queries are processed securely and anonymously.
 
-    **Q6: Can I use this on mobile?**  
-    Absolutely — it's mobile-friendly and responsive.
+    **Q6: What powers TripWise's travel recommendations?**  
+    A: TripWise uses an agentic AI framework combining OpenAI's LLMs, prompt engineering, and modular tools for smart itinerary generation.
+
+    **Q7: Can I use TripWise on mobile?**  
+    A: Yes! The app is responsive and works smoothly on mobile browsers — perfect for travel planning on the go. 📱
     """)
